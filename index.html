@@ -11,10 +11,20 @@
         <a-image src="lp-logo.png" position="0 0 0" width="1" height="0.1457" rotation="0 0 0"></a-image>
       </a-entity>
     </a-scene>
-    <div class="mindar-ui-overlay mindar-ui-scanning" style="align-items: end; justify-content: flex-end;">
-      <a href="instagram://user?username=_evillu">
-        <img src="instagram.png" style="height: 10%; padding: 1%;background-color: #ffffff66;border-radius: 30%;margin: 2%;">
-      </a>
+    <div class="mindar-ui-overlay mindar-ui-scanning" style="align-items: end; justify-content: flex-end; z-index: 3;">
+      <img id="instaLogo" src="instagram.png" style="height: 10%; padding: 1%;background-color: #ffffff66;border-radius: 30%;margin: 2%;">
     </div>
   </body>
 </html>
+<script>
+  document.getElementById('instaLogo').addEventListener('click', function() {
+    // Check if the user is on a mobile device
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+      // Open Instagram app
+      window.location.href = "instagram://user?username=_evillu";
+    } else {
+      // Open Instagram website
+      window.open("https://www.instagram.com/_evillu/", '_blank');
+    }
+  });
+</script>
