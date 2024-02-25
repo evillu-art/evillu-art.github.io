@@ -6,15 +6,14 @@
   </head>
   <body>
     <a-scene mindar-image="imageTargetSrc: ./targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-
-      <!-- Instagram Logo with Link -->
-      <a-link href="https://www.instagram.com/your_instagram_page">
-        <a-image src="instagram-logo.png" width="0.15" height="0.15" position="0.8 -0.7 -1"></a-image>
-      </a-link>
-
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       <a-entity mindar-image-target="targetIndex: 0">
         <a-image src="lp-logo.png" position="0 0 0" width="1" height="0.1457" rotation="0 0 0"></a-image>
+      </a-entity>
+      <a-entity>
+        <a-link href="https://www.instagram.com/your_instagram_page">
+          <a-image src="instagram-logo.png" width="0.15" height="0.15" position="0.8 -0.7 -1"></a-image>
+        </a-link>
       </a-entity>
     </a-scene>
   </body>
