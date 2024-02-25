@@ -1,20 +1,20 @@
 <html>
   <head>
     <title>Evillu - AR</title>
-    <link rel="icon" type="image/png" href="evilogo.jpg">
+    <link rel="icon" type="image/png" href="assets/evilogo.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
   </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc: ./targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: ./assets/ar/targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-image src="lp-logo.png" position="0 0 0" width="1" height="0.1457" rotation="0 0 0"></a-image>
+        <a-image src="assets/ar/lp-logo.png" position="0 0 0" width="1" height="0.1457" rotation="0 0 0"></a-image>
       </a-entity>
     </a-scene>
     <div class="mindar-ui-overlay mindar-ui-scanning" style="align-items: end; justify-content: flex-end; z-index: 3;">
-      <img id="instaLogo" src="instagram.png" style="height: 7%; padding: 1%;background-color: #ffffff66;border-radius: 30%;margin: 2%;">
+      <img id="instaLogo" src="assets/instagram.png" style="height: 7%; padding: 1%;background-color: #ffffff66;border-radius: 30%;margin: 2%;">
     </div>
   </body>
 </html>
