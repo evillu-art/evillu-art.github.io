@@ -1,0 +1,52 @@
+.mindar-ui-overlay.evillu-ai-overlay {
+    align-items: flex-end;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+.evillu-ai-overlay .button {
+    height: 7%;
+    padding: 1%;
+    background-color: #ffffff66;
+    border-radius: 30%;
+    margin: 2%;
+    cursor: pointer;
+}
+
+/* Navbar styles */
+.navbar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .navbar a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    white-space: nowrap;
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
