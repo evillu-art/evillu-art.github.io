@@ -10,6 +10,13 @@
   </head>
   <body>
     <div class="main-container">
+        <!-- Navbar -->
+        <div id="navbar" class="navbar">
+            <a class="header" href="#">Evillu</a>
+            <a href="/">AR Experience</a>
+            <a href="#" class="active">Silent Book</a>
+            <a href="#">Te jól alszol?</a>
+        </div>
         <!-- Title -->
         <div class="title-container">
             <p>Whiskers beneath Tokyo</p>
@@ -47,3 +54,26 @@
     </div>
   </body>
 </html>
+<script>
+
+    function openNav() {
+      document.getElementById("navbar").style.width = "250px";
+      document.getElementById("hamburger").setAttribute("onClick", "closeNav()");
+    }
+  
+    function closeNav() {
+      document.getElementById("navbar").style.width = "0";
+      document.getElementById("hamburger").setAttribute("onClick", "openNav()");
+    }
+  
+    document.getElementById('instaLogo').addEventListener('click', function() {
+      // Check if the user is on a mobile device
+      if (/Mobi|Android/i.test(navigator.userAgent)) {
+        // Open Instagram app
+        window.location.href = "instagram://user?username=_evillu";
+      } else {
+        // Open Instagram website
+        window.open("https://www.instagram.com/_evillu/", '_blank');
+      }
+    });
+  </script>

@@ -38,6 +38,16 @@ body {
   white-space: nowrap;
   cursor: pointer;
 }
+  
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #ddd;
+  color: black;
+}
 
 .mindar-ui-overlay.evillu-ai-overlay {
   align-items: flex-end;
@@ -53,14 +63,4 @@ body {
   margin: 2%;
   cursor: pointer;
   z-index: 4;
-}
-  
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.navbar a.active {
-  background-color: #ddd;
-  color: black;
 }

@@ -68,3 +68,50 @@ body {
 .flickity-page-dots .dot.is-selected {
     background: white;
 }
+
+/* Navbar styles */
+.navbar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .navbar a.header {
+    padding-bottom: 2em;
+    font-weight: 900;
+    font-size: xx-large;
+    cursor: default;
+  }
+  
+  .navbar a.header:hover {
+    color: white;
+    background-color: #111;
+  }
+  
+  .navbar a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+    
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .navbar a.active {
+    background-color: #ddd;
+    color: black;
+  }
