@@ -1,3 +1,7 @@
+body {
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
 /* Navbar styles */
 .navbar {
   height: 100%;
@@ -10,6 +14,18 @@
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+}
+
+.navbar a.header {
+  padding-bottom: 2em;
+  font-weight: 900;
+  font-size: xx-large;
+  cursor: default;
+}
+
+.navbar a.header:hover {
+  color: white;
+  background-color: #111;
 }
 
 .navbar a {
@@ -44,10 +60,7 @@
   color: black;
 }
 
-.closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+.navbar a.active {
+  background-color: #ddd;
+  color: black;
 }

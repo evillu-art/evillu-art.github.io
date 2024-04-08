@@ -1,0 +1,30 @@
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.button {
+    height: 7vh;
+    padding: 1%;
+    background-color: #ffffff66;
+    border-radius: 30%;
+    margin: 2%;
+    cursor: pointer;
+    z-index: 4;
+}
+
+/* position dots in carousel */
+.flickity-page-dots {
+    bottom: 0px;
+  }
+  /* white circles */
+  .flickity-page-dots .dot {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background: transparent;
+    border: 2px solid white;
+  }
+  /* fill-in selected dot */
+  .flickity-page-dots .dot.is-selected {
+    background: white;
+  }
