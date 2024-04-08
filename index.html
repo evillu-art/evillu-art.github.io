@@ -8,12 +8,6 @@
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
   </head>
   <body>
-    <div id="navbar" class="navbar">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-      <!-- Add more links here -->
-    </div>
     <a-scene mindar-image="imageTargetSrc: ./assets/ar/targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       <a-entity mindar-image-target="targetIndex: 0">
@@ -21,6 +15,12 @@
       </a-entity>
     </a-scene>
     <div class="mindar-ui-overlay mindar-ui-scanning evillu-ai-overlay">
+      <div id="navbar" class="navbar">
+        <a href="https://telex.hu" target="_blank">Telex</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <!-- Add more links here -->
+      </div>
       <img id="hamburger" src="assets/hamburger.png" class="button" onclick="openNav()">
       <img id="instaLogo" src="assets/instagram.png" class="button">
     </div>
