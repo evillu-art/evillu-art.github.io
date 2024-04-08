@@ -1,5 +1,45 @@
 body {
     font-family: 'Trebuchet MS', sans-serif;
+    background-color: #222;
+    min-height: 98vh;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+}
+
+.title-container p {
+    font-size: 5vh;
+    color: white;
+}
+
+.flickity-container {
+    flex: 1;
+}
+
+.carousel-cell div {
+    height:70vw;
+    width:70vw;
+    max-height: 65vh;
+}
+
+.carousel-cell div img {
+    height: 100%;
+    width: auto;
+}
+
+.button-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
 }
 
 .button {
@@ -15,16 +55,16 @@ body {
 /* position dots in carousel */
 .flickity-page-dots {
     bottom: 0px;
-  }
-  /* white circles */
-  .flickity-page-dots .dot {
+}
+/* white circles */
+.flickity-page-dots .dot {
     width: 12px;
     height: 12px;
     opacity: 1;
     background: transparent;
     border: 2px solid white;
-  }
-  /* fill-in selected dot */
-  .flickity-page-dots .dot.is-selected {
+}
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
     background: white;
-  }
+}

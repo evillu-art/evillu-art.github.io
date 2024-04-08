@@ -8,39 +8,39 @@
     <link rel="stylesheet" href="assets/flickity.css">
     <script src="assets/flickity.js"></script>
   </head>
-  <body style="background-color: #222; min-height: 98vh;">
-    <div style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;">
+  <body>
+    <div class="main-container">
         <!-- Title -->
-        <div style="display: flex; justify-content: center;">
-            <p style="font-size: 5vh; color: white;">Whiskers beneath Tokyo</p>
+        <div class="title-container">
+            <p>Whiskers beneath Tokyo</p>
         </div>
         <!-- Flickity -->
-        <div style="flex: 1;">
+        <div class="flickity-container">
             <div class="main-carousel gallery js-flickity" data-flickity-options='{ "wrapAround": false }'>
                 <div class="carousel-cell">
-                    <div style="height:70vw;width:70vw;max-height: 50vh;">
-                        <img style="height: 100%; width: auto;" src="https://picsum.photos/seed/evillu1/1000/1000">
+                    <div>
+                        <img src="https://picsum.photos/seed/evillu1/1000/1000">
                     </div>
                 </div>
                 <div class="carousel-cell">
-                    <div style="height:70vw;width:70vw;max-height: 50vh;">
-                        <img style="height: 100%; width: auto;" src="https://picsum.photos/seed/evillu2/1000/1000">
+                    <div>
+                        <img src="https://picsum.photos/seed/evillu2/1000/1000">
                     </div>
                 </div>
                 <div class="carousel-cell">
-                    <div style="height:70vw;width:70vw;max-height: 50vh;">
-                        <img style="height: 100%; width: auto;" src="https://picsum.photos/seed/evillu3/1000/1000">
+                    <div>
+                        <img src="https://picsum.photos/seed/evillu3/1000/1000">
                     </div>
                 </div>
                 <div class="carousel-cell">
-                    <div style="height:70vw;width:70vw;max-height: 50vh;">
-                        <img style="height: 100%; width: auto;" src="https://picsum.photos/seed/evillu4/1000/1000">
+                    <div>
+                        <img src="https://picsum.photos/seed/evillu4/1000/1000">
                     </div>
                 </div>
             </div>
         </div>
         <!-- Bottom icons -->
-        <div style="display: flex; align-items: flex-end; justify-content: space-between;">
+        <div class="button-container">
             <img id="hamburger" src="./../assets/hamburger.png" class="button" onclick="openNav()">
             <img id="instaLogo" src="./../assets/instagram.png" class="button">
         </div>
