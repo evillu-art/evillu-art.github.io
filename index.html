@@ -14,7 +14,7 @@
     <script src="assets/external/flickity.js"></script>
   </head>
   <body>
-    <div id="main-container">
+    <div id="main-container" onclick="closeNav()">
     </div>
     <div id="navbar" class="navbar">
       <a class="header" href="#">Evillu</a>
@@ -47,6 +47,10 @@
         if (this.readyState!==4) return;
         if (this.status!==200) return; // or whatever error handling you want
         document.getElementById('main-container').innerHTML= this.responseText;
+        const sceneEl = document.querySelector('a-scene');
+        sceneEl.addEventListener("arReady", (event) => {
+          document.getElementsByClassName("mindar-ui-scanning")[0].setAttribute("onClick", "closeNav()");
+        });
     };
     xhr.send();
   }
