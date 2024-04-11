@@ -1,7 +1,7 @@
-function loadPage(page) {
+const loadPage = (page) => {
     var xhr= new XMLHttpRequest();
     xhr.open('GET', "components/" + page + ".html", true);
-    xhr.onreadystatechange= function() {
+    xhr.onreadystatechange = function() {
         if (this.readyState!==4) return;
         if (this.status!==200) return; // or whatever error handling you want
         document.getElementById('main-container').innerHTML= this.responseText;
