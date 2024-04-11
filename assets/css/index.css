@@ -2,6 +2,7 @@ body {
   font-family: 'Trebuchet MS', sans-serif;
   background-color: #222;
   min-height: 98vh;
+  cursor: default;
 }
 
 .button-container {
@@ -10,7 +11,23 @@ body {
   top: 85vh;
   position: fixed;
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: space-between;
   z-index: 5;
+}
+
+.button-container .button-separator {
+  width: 100%;
+  height: 7vh;
+  margin: 2%;
+  padding: 1%;
+}
+
+.button {
+  height: 7vh;
+  padding: 1%;
+  background-color: #ffffff66;
+  border-radius: 30%;
+  margin: 2%;
+  cursor: pointer;
 }
