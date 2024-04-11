@@ -1,7 +1,6 @@
 .mindar-ui-overlay.evillu-ai-overlay {
     align-items: flex-end;
     justify-content: space-between;
-    z-index: 3;
   }
   
   .evillu-ai-overlay .button {
@@ -11,5 +10,4 @@
     border-radius: 30%;
     margin: 2%;
     cursor: pointer;
-    z-index: 4;
   }

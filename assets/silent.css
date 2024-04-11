@@ -43,7 +43,6 @@
     border-radius: 30%;
     margin: 2%;
     cursor: pointer;
-    z-index: 4;
 }
 
 /* position dots in carousel */
@@ -68,7 +67,6 @@
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 3;
     top: 0;
     left: 0;
     background-color: #111;
