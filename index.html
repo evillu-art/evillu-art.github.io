@@ -4,23 +4,24 @@
     <link rel="icon" type="image/png" href="assets/evilogo.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/index.css">
+    <link rel="stylesheet" href="assets/navbar.css">
+    <link rel="stylesheet" href="assets/ar.css">
+    <link rel="stylesheet" href="assets/silent.css">
+    <link rel="stylesheet" href="assets/external/flickity.css">
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+    <script src="assets/external/flickity.js"></script>
   </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc: ./assets/ar/targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-      <a-entity mindar-image-target="targetIndex: 0">
-        <a-image src="assets/ar/lp-logo.png" position="0 0 0" width="1" height="0.1457" rotation="0 0 0"></a-image>
-      </a-entity>
-    </a-scene>
+    <div id="main-container">
+    </div>
     <div class="mindar-ui-overlay mindar-ui-scanning evillu-ai-overlay">
       <div id="navbar" class="navbar">
         <a class="header" href="#">Evillu</a>
-        <a href="#" class="active">AR Experience</a>
-        <a href="/silent-book">Silent Book</a>
-        <a href="#">Te jól alszol?</a>
+        <a id="ar-exp-nav" href="#" onclick="clickLink('ar-exp-nav')">AR Experience</a>
+        <a id="silent-nav" href="#" onclick="clickLink('silent-nav')">Silent Book</a>
+        <a id="alszol-nav" href="#" onclick="clickLink('alszol-nav')">Te jól alszol?</a>
       </div>
       <img id="hamburger" src="assets/hamburger.png" class="button" onclick="openNav()">
       <img id="instaLogo" src="assets/instagram.png" class="button">
@@ -39,13 +40,79 @@
     document.getElementById("hamburger").setAttribute("onClick", "openNav()");
   }
 
-  document.getElementById('instaLogo').addEventListener('click', function() {
-    // Check if the user is on a mobile device
+  function loadPage(page) {
+    var xhr= new XMLHttpRequest();
+    xhr.open('GET', page, true);
+    xhr.onreadystatechange= function() {
+        if (this.readyState!==4) return;
+        if (this.status!==200) return; // or whatever error handling you want
+        document.getElementById('main-container').innerHTML= this.responseText;
+    };
+    xhr.send();
+  }
+
+  function clickLink(id) {
+    if (isActive(id)) {
+      return;
+    }
+
+    switch (id) {
+      case "ar-exp-nav":
+        loadPage("ar-dom.html")
+        break;
+      case "silent-nav":
+        removeAr()
+        loadPage("silent-dom.html")
+        reloadFlickity()
+        break;
+      case "alszol-nav":
+        removeAr()
+        loadPage("alszol-dom.html")
+        break;
+    }
+    makeActive(id)
+  }
+
+  function removeAr() {
+    document.querySelectorAll('.mindar-ui-overlay:not(.evillu-ai-overlay)').forEach( (element) => {
+      element.parentNode.removeChild(element);
+    });
+  }
+
+  function isActive(id) {
+    return document.getElementById(id).classList.contains("active");
+  }
+
+  function makeActive(id) {
+    ["ar-exp-nav","silent-nav","alszol-nav"].forEach((item) => {
+      elem = document.getElementById(item);
+      if (id == item) {
+        elem.classList.add("active")
+      } else {
+        elem.classList.remove("active")
+      }
+    });
+  }
+
+  function reloadFlickity() {
+    var scriptToRemove = document.querySelector('script[src="assets/external/flickity.js"]');
+    if (scriptToRemove) {
+        scriptToRemove.parentNode.removeChild(scriptToRemove);
+    }
+    var newScript = document.createElement('script');
+    newScript.src = "assets/external/flickity.js";
+    document.head.appendChild(newScript);
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    loadPage('ar-dom.html');
+    makeActive("ar-exp-nav")
+  }, false);
+
+  document.getElementById('instaLogo').addEventListener('click', () => {
     if (/Mobi|Android/i.test(navigator.userAgent)) {
-      // Open Instagram app
       window.location.href = "instagram://user?username=_evillu";
     } else {
-      // Open Instagram website
       window.open("https://www.instagram.com/_evillu/", '_blank');
     }
   });
