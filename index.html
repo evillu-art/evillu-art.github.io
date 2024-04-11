@@ -52,6 +52,8 @@
           sceneEl.addEventListener("arReady", (event) => {
             document.getElementsByClassName("mindar-ui-scanning")[0].setAttribute("onClick", "closeNav()");
           });
+        } else if (page=="silent-dom.html") {
+          new Flickity( '.main-carousel', {});
         }
     };
     xhr.send();
@@ -69,7 +71,6 @@
       case "silent-nav":
         removeAr()
         loadPage("silent-dom.html")
-        reloadFlickity()
         break;
       case "alszol-nav":
         removeAr()
@@ -98,16 +99,6 @@
         elem.classList.remove("active")
       }
     });
-  }
-
-  function reloadFlickity() {
-    var scriptToRemove = document.querySelector('script[src="assets/external/flickity.js"]');
-    if (scriptToRemove) {
-        scriptToRemove.parentNode.removeChild(scriptToRemove);
-    }
-    var newScript = document.createElement('script');
-    newScript.src = "assets/external/flickity.js";
-    document.head.appendChild(newScript);
   }
 
   window.addEventListener("DOMContentLoaded", () => {
