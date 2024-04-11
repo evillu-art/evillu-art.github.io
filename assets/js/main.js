@@ -1,4 +1,4 @@
-function removeAr() {
+const removeAr = () => {
     document.querySelectorAll('.mindar-ui-overlay').forEach( (element) => {
         element.parentNode.removeChild(element);
     });
@@ -7,23 +7,23 @@ function removeAr() {
 window.addEventListener("DOMContentLoaded", () => {
     // Load AR Experience
     loadPage('ar');
-    makeActive("ar-exp-nav")
+    makeActive("ar-exp-nav");
 
     // Make navbar working
     const navbar = document.getElementById("navbar");
-    navbar.addEventListener("click", function(event) {
+    navbar.addEventListener("click", (event) => {
         if (event.target.tagName === "A") {
             clickLink(event.target.id);
         }
     });
     const hamburger = document.getElementById("hamburger");
-    hamburger.addEventListener("click", openNav)
+    hamburger.addEventListener("click", openNav);
 
     // Make pageclick close navbar
     const mainContainer = document.getElementById("main-container");
     const separator = document.getElementsByClassName("button-separator")[0];
     mainContainer.addEventListener("click", closeNav);
-    separator.addEventListener("click", closeNav)
+    separator.addEventListener("click", closeNav);
 
     // Make instagram logo clickable on every device
     const instaLogo = document.getElementById('instaLogo');
