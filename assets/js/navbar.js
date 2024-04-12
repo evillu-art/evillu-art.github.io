@@ -19,16 +19,20 @@ const clickLink = (id) => {
 
     switch (id) {
         case "ar-exp-nav":
-        loadPage("ar");
-        break;
-    case "silent-nav":
-        removeAr();
-        loadPage("silent-book");
-        break;
-    case "alszol-nav":
-        removeAr();
-        loadPage("te-jol-alszol");
-        break;
+            loadPage("ar");
+            break;
+        case "silent-nav":
+            removeAr();
+            loadPage("silent-book");
+            break;
+        case "alszol-nav":
+            removeAr();
+            loadPage("te-jol-alszol");
+            break;
+        case "about-nav":
+            removeAr();
+            loadPage("rolam")
+            break;
     }
     makeActive(id);
 }
@@ -38,7 +42,7 @@ const isActive = (id) => {
 }
 
 const makeActive = (id) => {
-    ["ar-exp-nav","silent-nav","alszol-nav"].forEach((item) => {
+    ["ar-exp-nav","silent-nav","alszol-nav", "about-nav"].forEach((item) => {
         elem = document.getElementById(item);
         if (id == item) {
             elem.classList.add("active");
