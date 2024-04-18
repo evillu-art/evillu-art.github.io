@@ -16,7 +16,7 @@ for file in "$githooks_dir"/*; do
     chmod +x "$githooks_dir/$filename"
 
     # Create symlink in .git/hooks directory
-    ln "$githooks_dir/$filename" "$hooks_dir/$filename"
+    ln -sfn "../../$githooks_dir/$filename" "$hooks_dir/$filename"
 done
 
 echo "Hooks symlinked successfully."
