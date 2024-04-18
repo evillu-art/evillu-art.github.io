@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# Check if the commit message matches the required format:
+#   - conventional category of the commit
+#   - (optional) name of the changed component in parentheses
+#   - (optional) exclamation mark to indicate breaking change
+#   - a colon and a space
+#   - a message containing letters (upper- or lowercase), numbers, commas, dots, parentheses
+#   OR
+#  - a default Merge commit
+#exit 0
+regex="^\(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\([^\)]+\))?(!)?: [A-Za-z0-9 ,.()_-]+$"
+regex2="^\Merge branch '[^']+'( of [A-Za-z0-9_-]+)? into [A-Za-z0-9_-]+$"
+commit_msg_file="$1"
+commit_msg=$(cat "$commit_msg_file")
+
+if [[ $commit_msg =~ $regex ]]; then
+    exit 0
+fi
+
+if [[ $commit_msg =~ $regex2 ]]; then
+    exit 0
+fi
+echo "Commit message does not match a required pattern:"
+echo "Pattern 1: $regex"
+echo "Pattern 2: $regex2"
+echo "Commit message: $commit_msg"
+exit 1
