@@ -17,6 +17,7 @@
 
 .flickity-container {
     flex: 1;
+    pointer-events: none;
 }
 
 .carousel-cell div {
