@@ -11,7 +11,11 @@ const loadPage = (page) => {
                 document.getElementsByClassName("mindar-ui-scanning")[0].setAttribute("onClick", "closeNav()");
             });
         } else if (page=="silent-book" || page=="te-jol-alszol") {
-            new Flickity( '.main-carousel', {});
+            new Flickity( '.main-carousel', {
+                "fullscreen": true,
+                "draggable": false,
+                "wrapAround": false
+            });
         }
     };
     xhr.send();
