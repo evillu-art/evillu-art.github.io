@@ -19,11 +19,14 @@
     flex: 1;
 }
 
+.flickity-viewport {
+    pointer-events: none;
+}
+
 .carousel-cell div {
     height:70vw;
     width:70vw;
     max-height: 65vh;
-    pointer-events: none;
 }
 
 .carousel-cell div img {
