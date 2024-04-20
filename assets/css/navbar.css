@@ -23,21 +23,6 @@
     color: white;
     background-color: #111;
   }
-  
-.navbar span {
-  color: darkgray;
-  position: fixed;
-  bottom: 0;
-  font-size: xx-small;
-  padding-bottom: 1vh;
-  width: 100%;
-  padding-left: 10px;
-  transition: 0.3s;
-}
-
-.navbar span a {
-  all: unset;
-}
 
   .navbar a {
     padding: 10px;
