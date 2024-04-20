@@ -20,7 +20,8 @@
 }
 
 .flickity-viewport {
-    pointer-events: none;
+    /*pointer-events: none;*/
+    touch-action: pan-y pinch-zoom !important;
 }
 
 .carousel-cell div {
