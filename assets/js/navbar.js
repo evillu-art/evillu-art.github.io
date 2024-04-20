@@ -18,22 +18,22 @@ const clickLink = (id) => {
     }
 
     switch (id) {
-        case "ar-exp-nav":
-            loadPage("ar");
+        case "ar":
             break;
-        case "silent-nav":
+        case "silent-book":
             removeAr();
-            loadPage("silent-book");
             break;
-        case "alszol-nav":
+        case "te-jol-alszol":
             removeAr();
-            loadPage("te-jol-alszol");
             break;
-        case "about-nav":
+        case "rolam":
             removeAr();
-            loadPage("rolam")
             break;
+        default:
+            console.log("Unknown page!")
+            return;
     }
+    loadPage(id);
     makeActive(id);
 }
 
@@ -42,7 +42,7 @@ const isActive = (id) => {
 }
 
 const makeActive = (id) => {
-    ["ar-exp-nav","silent-nav","alszol-nav", "about-nav"].forEach((item) => {
+    ["ar","silent-book","te-jol-alszol", "rolam"].forEach((item) => {
         elem = document.getElementById(item);
         if (id == item) {
             elem.classList.add("active");

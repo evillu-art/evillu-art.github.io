@@ -4,10 +4,24 @@ const removeAr = () => {
     });
 }
 
+const getHash = () => {
+    var url = window.location.href;
+    if (url.indexOf('#') !== -1) {
+        var hashtag = url.split('#')[1];
+        return hashtag;
+    }
+    return null;
+}
+
 window.addEventListener("DOMContentLoaded", () => {
     // Load AR Experience
-    loadPage('ar');
-    makeActive("ar-exp-nav");
+    hashpage = getHash();
+    if (hashpage !== null && ["ar", "rolam", "silent-book", "te-jol-alszol"].includes(hashpage)) {
+        loadPage(hashpage)
+    } else {
+        loadPage('ar');
+        makeActive("ar");
+    }
 
     // Make navbar working
     const navbar = document.getElementById("navbar");
