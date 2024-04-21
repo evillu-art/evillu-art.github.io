@@ -2,6 +2,7 @@ const removeAr = () => {
     document.querySelectorAll('.mindar-ui-overlay').forEach( (element) => {
         element.parentNode.removeChild(element);
     });
+    document.getElementsByTagName("html")[0].classList.remove("a-fullscreen");
 }
 
 const getHash = () => {

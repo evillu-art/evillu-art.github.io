@@ -8,6 +8,8 @@
 .title-container {
     display: flex;
     justify-content: center;
+    margin: 0 5vw;
+    text-align: center;
 }
 
 .title-container p {
