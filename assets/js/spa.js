@@ -13,7 +13,8 @@ const loadPage = (page) => {
         } else if (page=="silent-book" || page=="te-jol-alszol") {
             new Flickity( '.main-carousel', {
                 "draggable": true,
-                "wrapAround": false
+                "wrapAround": true,
+                "freeScroll": true
             });
         }
     };

@@ -28,8 +28,10 @@
 
 .carousel-cell div {
     height:70vw;
-    width:70vw;
+    min-width:70vw;
     max-height: 65vh;
+    text-align: center;
+    padding-right: 1vw;
 }
 
 .carousel-cell div img {
