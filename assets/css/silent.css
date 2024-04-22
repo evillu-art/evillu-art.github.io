@@ -26,18 +26,39 @@
     touch-action: pan-y pinch-zoom !important;
 }
 
+.carousel-cell {
+    width: 70vw; /* Adjust the width of each cell */
+    max-width: 70vw; /* Set the maximum width relative to the screen size */
+    margin: 0 auto; /* Center the cells horizontally */
+    max-height: 70vh;
+}
+
 .carousel-cell div {
-    height:70vw;
-    min-width:70vw;
-    max-height: 65vh;
-    text-align: center;
-    padding-right: 1vw;
+    height: 0; /* Set the height of the container div to 0 */
+    padding-top: 70%;
+    position: relative; /* Position the container div relative to its parent */
+    overflow: hidden; /* Hide any content that overflows the container */
+    max-height: 70vh;
+}
+
+.carousel-cell div.vertical {
+    height: 0; /* Set the height of the container div to 0 */
+    padding-top: 150%;
+    position: relative; /* Position the container div relative to its parent */
+    overflow: hidden; /* Hide any content that overflows the container */
 }
 
 .carousel-cell div img {
-    height: 100%;
-    width: auto;
+    position: absolute; /* Position the image absolutely within its container */
+    top: 0; /* Position the image at the top of its container */
+    left: 0; /* Position the image at the left of its container */
+    width: 100%; /* Set the width of the image to 100% of its container */
+    height: auto; /* Allow the height of the image to adjust proportionally */
+    max-height: 70vh;
 }
+
+
+
 
 /* position dots in carousel */
 .flickity-page-dots {
