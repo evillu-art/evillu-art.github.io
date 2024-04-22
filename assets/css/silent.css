@@ -55,7 +55,7 @@
 
 /* position dots in carousel */
 .flickity-page-dots {
-    bottom: 0px;
+    top: 51vw;
 }
 /* white circles */
 .flickity-page-dots .dot {
