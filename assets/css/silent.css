@@ -52,7 +52,7 @@
     position: absolute; /* Position the image absolutely within its container */
     top: 0; /* Position the image at the top of its container */
     left: 0; /* Position the image at the left of its container */
-    width: 100%; /* Set the width of the image to 100% of its container */
+    max-width: 100%; /* Set the width of the image to 100% of its container */
     height: auto; /* Allow the height of the image to adjust proportionally */
     max-height: 70vh;
 }
