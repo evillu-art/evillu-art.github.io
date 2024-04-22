@@ -27,38 +27,31 @@
 }
 
 .carousel-cell {
-    width: 70vw; /* Adjust the width of each cell */
-    max-width: 70vw; /* Set the maximum width relative to the screen size */
-    margin: 0 auto; /* Center the cells horizontally */
+    width: 70vw;
+    max-width: 35vw;
+    margin: 0 auto;
     max-height: 70vh;
+}
+
+.carousel-cell:nth-child(2n) {
+    margin-left: 1vw;
 }
 
 .carousel-cell div {
-    height: 0; /* Set the height of the container div to 0 */
-    padding-top: 70%;
-    position: relative; /* Position the container div relative to its parent */
-    overflow: hidden; /* Hide any content that overflows the container */
-    max-height: 70vh;
-}
-
-.carousel-cell div.vertical {
-    height: 0; /* Set the height of the container div to 0 */
+    height: 0;
     padding-top: 150%;
-    position: relative; /* Position the container div relative to its parent */
-    overflow: hidden; /* Hide any content that overflows the container */
+    position: relative;
+    overflow: hidden;
 }
 
 .carousel-cell div img {
-    position: absolute; /* Position the image absolutely within its container */
-    top: 0; /* Position the image at the top of its container */
-    left: 0; /* Position the image at the left of its container */
-    max-width: 100%; /* Set the width of the image to 100% of its container */
-    height: auto; /* Allow the height of the image to adjust proportionally */
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: auto;
     max-height: 70vh;
 }
-
-
-
 
 /* position dots in carousel */
 .flickity-page-dots {
