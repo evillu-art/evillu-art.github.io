@@ -32,7 +32,7 @@
 }
 
 .carousel-cell:nth-child(2n) {
-    margin-left: 1vw;
+    margin-left: 2vw;
 }
 
 .carousel-cell div {

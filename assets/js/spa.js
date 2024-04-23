@@ -17,7 +17,7 @@ const loadPage = (page) => {
                 "freeScroll": true,
                 "pageDots": false,
                 "adaptiveHeight": true,
-                "lazyLoad": 2
+                "lazyLoad": 2,
             });
         }
     };
