@@ -28,7 +28,7 @@
 
 .carousel-cell {
     width: 70vw;
-    margin: 0 auto;
+    margin: 0px;
 }
 
 .carousel-cell:nth-child(2n) {
