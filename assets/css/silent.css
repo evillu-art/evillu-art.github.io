@@ -28,7 +28,9 @@
 
 .carousel-cell {
     width: 70vw;
-    margin: 0px;
+    margin-right: 0px;
+    max-height: 70vh;
+    max-width: 49.4vh;
 }
 
 .carousel-cell:nth-child(2n) {
@@ -36,7 +38,6 @@
 }
 
 .carousel-cell div {
-    height: 0;
     padding-top: 150%;
     position: relative;
     overflow: hidden;
@@ -47,7 +48,6 @@
     top: 0;
     left: 0;
     max-width: 100%;
-    height: auto;
     max-height: 70vh;
 }
 
