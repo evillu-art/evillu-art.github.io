@@ -14,7 +14,10 @@ const loadPage = (page) => {
             new Flickity( '.main-carousel', {
                 "draggable": true,
                 "wrapAround": true,
-                "freeScroll": true
+                "freeScroll": true,
+                "pageDots": false,
+                "adaptiveHeight": true,
+                "lazyLoad": 2
             });
         }
     };

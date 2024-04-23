@@ -28,9 +28,7 @@
 
 .carousel-cell {
     width: 70vw;
-    max-width: 45vw;
     margin: 0 auto;
-    max-height: 80vh;
 }
 
 .carousel-cell:nth-child(2n) {
