@@ -19,6 +19,15 @@ window.addEventListener("DOMContentLoaded", () => {
     hashpage = getHash();
     if (hashpage !== null && ["ar", "rolam", "silent-book", "te-jol-alszol"].includes(hashpage)) {
         loadPage(hashpage)
+        if (hashpage === "ar") {
+            if (confirm("Click to load AR experience:")) {
+                loadPage('ar');
+                makeActive("ar");
+            } else {
+                loadPage("silent-book")
+                makeActive("silent-book")
+            }     
+        }
     } else {
         if (confirm("Click to load AR experience:")) {
             loadPage('ar');
