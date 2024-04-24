@@ -2,6 +2,7 @@
     <a-assets>
         <video id="nonfic-blue-vid" src="assets/ar/nonfic-blue-vid.mp4" autoplay loop muted playsinline></video>
         <video id="nonfic-orange-vid" src="assets/ar/nonfic-orange-vid.mp4" autoplay loop muted playsinline></video>
+        <video id="wbt-vid" src="assets/ar/wbt.mp4" autoplay loop muted playsinline></video>
     </a-assets>
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
     <a-entity mindar-image-target="targetIndex: 0">
@@ -9,5 +10,8 @@
     </a-entity>
     <a-entity mindar-image-target="targetIndex: 1">
         <a-video src="#nonfic-orange-vid" position="0 0 0" width="1" height="0.7072" rotation="0 0 0"></a-video>
+    </a-entity>
+    <a-entity mindar-image-target="targetIndex: 2">
+        <a-video src="#wbt-vid" position="0 0 0" width="1" height="0.7072" rotation="0 0 0"></a-video>
     </a-entity>
 </a-scene>
