@@ -10,8 +10,12 @@ const loadPage = (page) => {
             const sceneEl = document.querySelector('a-scene');
             sceneEl.addEventListener("arReady", (event) => {
                 if (!enabledAr) {
-                    if (confirm('Click "ok" to enable AR content.')) {
-                        enabledAr = true;
+                    is_ios = /iP(ad|od|hone)/i.test(window.navigator.userAgent),
+                    is_safari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
+                    if ( is_ios && is_safari ) {
+                        if (confirm('Seems like you use Safari. Please navigate to a new page from the bottom left corner, then navigate back to "AR Experience".')) {
+                            enabledAr = true;
+                        }
                     }
                 }
                 document.getElementsByClassName("mindar-ui-scanning")[0].setAttribute("onClick", "closeNav()");
