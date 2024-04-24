@@ -20,3 +20,9 @@
     font-size: 3.5vh;
     color: white;
 }
+
+.selectable {
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
