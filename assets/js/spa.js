@@ -8,6 +8,7 @@ const loadPage = (page) => {
         if (page == "ar") {
             const sceneEl = document.querySelector('a-scene');
             sceneEl.addEventListener("arReady", (event) => {
+                confirm('Click "ok" to enable AR content.');
                 document.getElementsByClassName("mindar-ui-scanning")[0].setAttribute("onClick", "closeNav()");
             });
         } else if (page=="silent-book" || page=="te-jol-alszol") {
