@@ -28,6 +28,7 @@ const loadPage = (page) => {
                 "pageDots": false,
                 "adaptiveHeight": true,
                 "lazyLoad": 2,
+                "imagesLoaded": true
             });
         }
     };

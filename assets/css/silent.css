@@ -19,6 +19,7 @@
 
 .flickity-container {
     flex: 1;
+    padding-bottom: 15%;
 }
 
 .flickity-viewport {
