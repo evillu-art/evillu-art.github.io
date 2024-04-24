@@ -22,7 +22,6 @@ window.addEventListener("DOMContentLoaded", () => {
     } else {
         loadPage('ar');
         makeActive("ar");
-        confirm("Click me!");
     }
 
     // Make navbar working
