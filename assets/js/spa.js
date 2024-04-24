@@ -1,3 +1,4 @@
+let enabledAr = false;
 const loadPage = (page) => {
     var xhr= new XMLHttpRequest();
     xhr.open('GET', "components/" + page + ".html", true);
@@ -8,7 +9,11 @@ const loadPage = (page) => {
         if (page == "ar") {
             const sceneEl = document.querySelector('a-scene');
             sceneEl.addEventListener("arReady", (event) => {
-                confirm('Click "ok" to enable AR content.');
+                if (!enabledAr) {
+                    if (confirm('Click "ok" to enable AR content.')) {
+                        enabledAr = true;
+                    }
+                }
                 document.getElementsByClassName("mindar-ui-scanning")[0].setAttribute("onClick", "closeNav()");
             });
         } else if (page=="silent-book" || page=="te-jol-alszol") {
