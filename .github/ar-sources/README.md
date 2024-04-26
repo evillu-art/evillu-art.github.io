@@ -17,8 +17,8 @@ These files are the ones to compile the MindAR tracking file against.
 | 8.jpg  | face6.mp4             | Yes   |
 | 9.jpg  | wbt-2.mp4             | Yes   |
 | 10.jpg | wbt-3.mp4             | Yes   |
-| 11.jpg | elozek.jpg            | |
-| 12.jpg | leporello-back-1.jpg  | |
-| 13.jpg | leporello-back-2.jpg  | |
-| 14.jpg | leporello-back-3.jpg  | |
-| 15.jpg | leporello-back-4.jpg  | |
+| 11.jpg | elozek.jpg            | Yes   |
+| 12.jpg | leporello-back-1.jpg  | Yes   |
+| 13.jpg | leporello-back-2.jpg  | Yes   |
+| 14.jpg | leporello-back-3.jpg  | Yes   |
+| 15.jpg | leporello-back-4.jpg  | Yes   |
