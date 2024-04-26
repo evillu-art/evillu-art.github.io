@@ -13,7 +13,7 @@ const loadPage = (page) => {
                     is_ios = /iP(ad|od|hone)/i.test(window.navigator.userAgent),
                     is_safari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
                     if ( is_ios && is_safari ) {
-                        if (confirm('Seems like you use Safari. Please navigate to a new page from the bottom left corner, then navigate back to "AR Experience".')) {
+                        if (confirm('Seems like you use iOS. Please navigate to a new page from the bottom left corner, then navigate back to "AR Experience".')) {
                             enabledAr = true;
                         }
                     }
